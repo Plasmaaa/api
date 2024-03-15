@@ -15,7 +15,7 @@ function App() {
     try {
       const data = await getTodayPicture(date);
       setImageData(data);
-      setError(null); // Réinitialise l'erreur en cas de succès de la requête
+      setError(null); 
     } catch (error) {
       console.error('Error fetching image data:', error);
       setError('Aucune image trouvée pour cette date.');
@@ -29,7 +29,7 @@ function App() {
   };
 
   useEffect(() => {
-    // Au chargement initial, charge l'image d'aujourd'hui
+   
     const today = new Date().toISOString().split('T')[0];
     setSelectedDate(today);
     fetchImageData(today);
