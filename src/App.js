@@ -18,8 +18,8 @@ function App() {
       setError(null); // Réinitialise l'erreur en cas de succès de la requête
     } catch (error) {
       console.error('Error fetching image data:', error);
-      setError('Aucune image trouvée pour cette date.'); // Définit le message d'erreur
-      setImageData(null); // Efface les données de l'image en cas d'erreur
+      setError('Aucune image trouvée pour cette date.');
+      setImageData(null); 
     }
   };
 
@@ -49,8 +49,8 @@ function App() {
           />
           <button type="submit">Choisir une date</button>
         </form>
-        {error && <p>{error}</p>} {/* Affiche le message d'erreur s'il existe */}
-        {imageData && !error && ( /* Affiche la photo et le texte uniquement si imageData est défini et qu'il n'y a pas d'erreur */
+        {error && <p>{error}</p>} {}
+        {imageData && !error && ( 
           <div>
             <h2>{imageData.title}</h2>
             <img src={imageData.url} alt={imageData.title} />
